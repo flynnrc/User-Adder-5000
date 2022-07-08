@@ -1,9 +1,5 @@
 ﻿# User-Adder-5000
 
-REACT Web App
+A Hello Web App, with REACT, to list User Info. 
 
-Init:
-
-npm install
-
-npm start
+To Install and Launch Localhost: <br /> 1.) npm install <br /> 2) npm start <br />
