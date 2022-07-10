@@ -1,6 +1,6 @@
 ﻿# User-Adder-5000
 
-## A Hello Web App, with REACT, to list User Info. 
+## Purpose: A Web App, with REACT, to list User Info. Demonstrates: Core React Concepts
 
 ###### NPM Info
 ```
