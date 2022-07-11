@@ -2,10 +2,20 @@ import React from "react";
 import Card from "../UI/Card";
 import classes from "./AddUser.module.css";
 import Button from "../UI/Button";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import ErrorModal from "../UI/ErrorModal";
 
 const AddUser = (props) => {
+  //Using Refs
+  const nameInputRef = useRef();
+  const ageInputRef = useRef();
+  console.log(nameInputRef);
+  console.log(ageInputRef);
+  //const userName = (nameInputRef.current.value);
+  //const age = (ageInputRef.current.value);
+  //When using useRef over useState, then disable the useStateHandlers
+  //----------
+
   const [userName, setUserName] = useState("");
   const [age, setAge] = useState("");
   const [error, setError] = useState("");
@@ -35,6 +45,11 @@ const AddUser = (props) => {
 
     setUserName("");
     setAge("");
+
+    //Using Refs
+    //nameInputRef.current.value = '';
+    //ageInputRef.current.value = '';
+    //----------
   };
 
   const userNameChangeHandler = (event) => {
@@ -63,7 +78,7 @@ const AddUser = (props) => {
   );
 
   return (
-    <div>
+    <>
       {
         errorContent
         /* {error && (
@@ -78,18 +93,20 @@ const AddUser = (props) => {
             type="text"
             value={userName}
             onChange={userNameChangeHandler}
-          ></input>
+            //ref={nameInputRef}
+          />
           <label htmlFor="age">Age (Years)</label>
           <input
             id="age"
             type="number"
             value={age}
             onChange={userAgeChangeHandler}
+            // ref={ageInputRef}
           ></input>
           <Button type="submit">Add User</Button>
         </form>
       </Card>
-    </div>
+    </>
   );
 };
 
