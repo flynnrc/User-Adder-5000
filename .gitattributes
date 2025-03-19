@@ -1,14 +1,1 @@
-/*# Ensure React files are properly detected
-*.tsx linguist-detectable=true
-*.jsx linguist-detectable=true
-*.tsx linguist-language=JavaScript
-*.jsx linguist-language=JavaScript
 
-# Treat TypeScript files as TypeScript
-*.ts linguist-language=TypeScript
-
-# Ignore dependencies from language stats
-node_modules/* linguist-vendored
-dist/* linguist-vendored
-build/* linguist-vendored
-*/
